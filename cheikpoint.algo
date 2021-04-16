@@ -1,0 +1,23 @@
+ALGORITHM sentence
+VAR 
+i,j,k:INTEGER;
+ch:STRING;
+BEGIN
+write("donner une paragraphe");
+Read(ch);
+i:=1;
+k:=1;
+WHILE (ch[i]<>".") DO
+   IF (((ch[i] in["a".."z"])or(ch[i] in["A".."Z"]))) THEN
+       j:=j+1;//nombre de caracter
+          END_IF
+          IF ((ch[i] in("a","e","o","u","i","y") or (ch[i] in("A","E","O","U","I","Y"))) THEN
+              k:=k+1
+          END_IF
+          IF (ch[i]="") THEN
+              nbr:=nbr+1;
+          END_IF
+          i:+i+1
+END_WHILE
+write("le nombre de caractere est"j"le nombre de caractere est"k,"le nombre des mots est"nbr)
+END
